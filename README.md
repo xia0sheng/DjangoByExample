@@ -1,14 +1,9 @@
-基于 django 1.11 和 Python 3.6 的 django 博客开发入门教程，带领你从零开始一步步开发属于自己的个人博客，让你以最快的速度掌握 django 开发的技巧。
+基于 django 1.11 和 Python 3.6 的 django by example教程
 
 项目演示地址
 
 http://blog.wangyouyu.com/
 
-项目教程
-
-本项目配有完整的教程说明，教程阅读地址：django 博客开发入门教程。
-
-每篇教程的代码都位于项目相应的分支中，点击上方的 Branch 按钮可以查看到，例如分支 Step1_build-development-environment 对应第 2 篇教程 2. 搭建开发环境。
 
 master 主分支是整个项目的完整代码。
 
@@ -49,7 +44,7 @@ python manage.py migrate
 在上一步所在的位置运行如下命令创建后台管理员账户
 
 python manage.py createsuperuser
-具体请参阅：8. 在 django admin 后台发布我们的文章
+
 
 运行开发服务器
 
@@ -64,4 +59,4 @@ python manage.py runserver
 
 使用第 5 步创建的后台管理员账户登录
 
-具体请参阅：8. 在 django admin 后台发布我们的文章
+
