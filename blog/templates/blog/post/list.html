@@ -1,9 +1,9 @@
 {% extends "blog/base.html" %}
 
-{% block title %}我的博客{% endblock %}
+{% block title %}xia0sheng的博客{% endblock %}
 
 {% block content %}
-    <h1>wode blog</h1>
+    <h1>xia0sheng的博客</h1>
     {% for post in posts %}
         <h2>
             <a href="{{ post.get_absolute_url }}">
@@ -15,5 +15,6 @@
         </p>
         {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
+    {% include "blog/pagination.html" with page=page_obj %}
 {% endblock %}
     
