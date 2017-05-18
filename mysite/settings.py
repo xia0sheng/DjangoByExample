@@ -25,7 +25,7 @@ SECRET_KEY = '9v4f_#50)!89z6$*v!vp^+c%kx-c2qzyk-d)ebk5wq8dzh&j(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blog.wangyouyu.com']
 
 
 # Application definition
