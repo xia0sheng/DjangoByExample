@@ -80,7 +80,6 @@ DATABASES = {
         'NAME': 'djangobyexample',
         'USER': 'test',
         'PASSWORD': '123456',
-        'HOST': 'localhost',
 	'OPTIONS': {	
 		'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
 	}
