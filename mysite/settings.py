@@ -25,7 +25,7 @@ SECRET_KEY = '9v4f_#50)!89z6$*v!vp^+c%kx-c2qzyk-d)ebk5wq8dzh&j(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blog.wangyouyu.com']
 
 
 # Application definition
@@ -81,6 +81,9 @@ DATABASES = {
         'USER': 'test',
         'PASSWORD': '123456',
         'HOST': '101.200.238.12',
+	    'OPTIONS': {
+		        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+	}
     }
 }
 
