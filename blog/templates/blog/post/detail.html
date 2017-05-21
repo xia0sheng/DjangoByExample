@@ -8,4 +8,36 @@
         Published {{ post.publish }} by {{ post.author }}
     </p>
     {{ post.body|linebreaks }}
+    <p>
+        <a href="{% url "blog:post_share" post.id %}">
+            分享此文章
+        </a>
+    </p>
+    
+    {% with comments.count as total_comments %}
+        <h2>
+            {{ total_comments }} Comment{{ total_comments|pluralize }}
+        </h2>
+    {% endwith %}
+
+    {% for comment in comments %}
+        <div class="comment">
+            <p class="info">第 {{ forloop.counter }} 条评论 by {{ comment.name }} 创建于 {{ comment.created }}</p>
+            <p>{{ comment.body }}</p>
+        </div>
+    {%  empty %}
+        <p>暂时没有评论</p>
+    {% endfor %}
+
+    {% if new_comment %}
+        <p>评论成功</p>
+    {% else %}
+        <form action="." method="post">
+            {{ comment_from.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="提交评论"></p>
+        </form>
+    {% endif %}
+
+
 {% endblock %}
