@@ -25,7 +25,7 @@ SECRET_KEY = '9v4f_#50)!89z6$*v!vp^+c%kx-c2qzyk-d)ebk5wq8dzh&j(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blog.wangyouyu.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -80,7 +80,11 @@ DATABASES = {
         'NAME': 'djangobyexample',
         'USER': 'test',
         'PASSWORD': '123456',
+        # 'HOST': '101.200.238.12',
         'HOST': 'localhost',
+	    'OPTIONS': {
+		        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+	}
     }
 }
 
@@ -123,4 +127,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = 'wangyouyu6@163.com'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
 
