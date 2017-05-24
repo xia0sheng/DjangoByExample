@@ -5,8 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %}</title>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static "blog/css/blog.css" %}" rel="stylesheet">
-</head>
+    <link href="{% static 'blog/css/highlights/github.css' %}" rel="stylesheet">
+    </head>
 <body>
     <div id="content">
         {% block content %}
@@ -17,6 +19,7 @@
             <p>This is my blog.</p>
 
             <p>这是我的博客，目前为止一共写了{% total_posts %}篇博文！</p>
+            <p><a href="{% url "blog:post_feed" %}">订阅到我的RSS</a></p>
             {% show_latest_posts %}
 
             <h3>评论最多的文章</h3>
